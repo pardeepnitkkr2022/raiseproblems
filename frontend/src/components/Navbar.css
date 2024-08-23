@@ -1,0 +1,94 @@
+/* Navbar Styling */
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+    background-color: #333;
+    color: #fff;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    box-sizing: border-box; /* Include padding in width calculation */
+}
+
+.brand {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.menu-toggle {
+    display: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+ul {
+    display: flex;
+    gap: 15px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    margin: 0;
+}
+
+a, .logout-button {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1rem;
+    padding: 8px 15px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+a:hover, .logout-button:hover {
+    background-color: #555;
+}
+
+.logout-button {
+    background-color: #dc3545;
+    border: none;
+    cursor: pointer;
+}
+
+.logout-button:hover {
+    background-color: #c82333;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: block;
+    }
+
+    ul {
+        display: flex;
+        flex-direction: column;
+        position: fixed; /* Fixed position to stay within the viewport */
+        top: 50px; /* Adjust if needed */
+        left: 0;
+        right: 0;
+        background-color: #333;
+        width: 100%;
+        max-width: 100%; /* Ensure it does not exceed viewport width */
+        transform: translateX(100%); /* Hide menu off-screen by default */
+        transition: transform 0.3s ease;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add shadow for better visibility */
+    }
+
+    ul.active {
+        transform: translateX(0); /* Show menu when active */
+    }
+
+    li {
+        margin: 10px 0;
+        text-align: center;
+    }
+}

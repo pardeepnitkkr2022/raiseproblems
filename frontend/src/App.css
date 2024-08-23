@@ -1,0 +1,78 @@
+/* App.css */
+
+/* General Styles */
+body {
+  margin: 0;
+  font-family: 'Arial', sans-serif;
+  color: #333;
+  background-color: #f0f0f0;
+  overflow-x: hidden;
+}
+
+.app {
+  display: flex;
+  flex-direction: column;
+  background-color: #ffffff;
+  min-height: 100vh;
+}
+
+main.main-content {
+  flex: 1;
+  padding: 20px;
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Navbar Styles */
+.Navbar {
+  background-color: #1a1a1a;
+  padding: 15px 20px;
+  color: #ffffff;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.Navbar h1 {
+  margin: 0;
+  font-size: 1.5rem;
+}
+
+.Navbar a {
+  color: #ffffff;
+  text-decoration: none;
+  margin: 0 10px;
+  font-size: 1rem;
+}
+
+.Navbar a:hover {
+  text-decoration: underline;
+}
+
+/* ParticlesBackground Styles */
+.ParticlesBackground {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .Navbar {
+      flex-direction: column;
+      align-items: flex-start;
+  }
+
+  .Navbar a {
+      margin: 5px 0;
+  }
+
+  main.main-content {
+      padding: 10px;
+  }
+}
