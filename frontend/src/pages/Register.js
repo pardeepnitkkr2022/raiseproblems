@@ -14,9 +14,13 @@ const Register = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      await register(formData);
-      
+      const response = await register(formData);
+      const { token } = response.data;
+
+     
       localStorage.setItem('authToken', token);
+
+
       navigate('/');
     } catch (error) {
       console.error('Registration error:', error);
@@ -58,3 +62,4 @@ const Register = () => {
 };
 
 export default Register;
+
