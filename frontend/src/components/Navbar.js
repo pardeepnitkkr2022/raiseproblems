@@ -14,7 +14,7 @@ const Navbar = () => {
 
     return (
         <nav>
-            <div className="brand">MyApp</div>
+            <div className="brand">raiseproblem</div>
             <div className="menu-toggle" onClick={toggleMenu}>
                 ☰
             </div>
