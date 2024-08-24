@@ -15,6 +15,8 @@ const Register = () => {
     e.preventDefault();
     try {
       await register(formData);
+      
+      localStorage.setItem('authToken', token);
       navigate('/');
     } catch (error) {
       console.error('Registration error:', error);
